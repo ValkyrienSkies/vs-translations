@@ -60,31 +60,31 @@ valkyrienskies.general.gravityvecz=Z轴重力矢量分量
 valkyrienskies.general.gravityvecz.tooltip=
 
 valkyrienskies.general.tickstosticktoship=玩家从属于飞船空间的时间
-valkyrienskies.general.tickstosticktoship.tooltip=如果玩家碰到飞船, 除非他们离开并碰到其他飞船 (或者陆地) 他们会在这么多tick的时间区间内和飞船同步移动。超出这个区间玩家将不再和飞船同步移动
+valkyrienskies.general.tickstosticktoship.tooltip=如果玩家碰到飞船, 除非他们离开并碰到其他飞船 (或者陆地) 他们会在这么多tick的时间区间内和飞船同步移动。超出这个区间玩家将不再和飞船同步移动。
 
 valkyrienskies.general.ship_loading_settings=飞船加载设置
 valkyrienskies.general.ship_loading_settings.tooltip=设置飞船的加载距离和渲染距离。 这些设置必须满足以下条件:\n飞船渲染距离 < 飞船加载距离 < 飞船预加载距离 <= 飞船停止渲染距离 < 飞船停止加载距离
 
 valkyrienskies.general.ship_loading_settings.watchDistance=飞船渲染距离
-valkyrienskies.general.ship_loading_settings.watchDistance.tooltip=玩家和飞船距离的XZ平面投影小于此数值时可以看到飞船
+valkyrienskies.general.ship_loading_settings.watchDistance.tooltip=玩家和飞船距离的XZ平面投影小于此数值时可以看到飞船。
 
 valkyrienskies.general.ship_loading_settings.loadDistance=飞船加载距离
-valkyrienskies.general.ship_loading_settings.loadDistance.tooltip=玩家和飞船距离的XZ平面投影小于此数值时将加载飞船
+valkyrienskies.general.ship_loading_settings.loadDistance.tooltip=玩家和飞船距离的XZ平面投影小于此数值时将加载飞船。
 
 valkyrienskies.general.ship_loading_settings.loadBackgroundDistance=飞船预加载距离
-valkyrienskies.general.ship_loading_settings.loadBackgroundDistance.tooltip=玩家和飞船距离的XZ平面投影小于此数值时将预加载飞船
+valkyrienskies.general.ship_loading_settings.loadBackgroundDistance.tooltip=玩家和飞船距离的XZ平面投影小于此数值时将预加载飞船。
 
 valkyrienskies.general.ship_loading_settings.unwatchDistance=飞船停止渲染距离
-valkyrienskies.general.ship_loading_settings.unwatchDistance.tooltip=玩家和飞船距离的XZ平面投影大于这个值时飞船将停止渲染
+valkyrienskies.general.ship_loading_settings.unwatchDistance.tooltip=玩家和飞船距离的XZ平面投影大于这个值时飞船将停止渲染。
 
 valkyrienskies.general.ship_loading_settings.unloadDistance=飞船停止加载距离
-valkyrienskies.general.ship_loading_settings.unloadDistance.tooltip=玩家和飞船距离的XZ平面投影大于这个值时飞船将停止加载
+valkyrienskies.general.ship_loading_settings.unloadDistance.tooltip=玩家和飞船距离的XZ平面投影大于这个值时飞船将停止加载。
 
 valkyrienskies.general.shipspawndetectorblacklist=构建飞船黑名单
-valkyrienskies.general.shipspawndetectorblacklist.tooltip=这些方块构建飞船时将不被包含
+valkyrienskies.general.shipspawndetectorblacklist.tooltip=这些方块构建飞船时将不被包含。
 
 valkyrienskies.general.blockmass=方块质量
-valkyrienskies.general.blockmass.tooltip=修改自动生成的方块质量，单位是千克
+valkyrienskies.general.blockmass.tooltip=修改自动生成的方块质量，单位是千克。
 
 ### Valkyrien Skies Control
 
