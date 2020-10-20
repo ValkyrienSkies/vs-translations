@@ -48,7 +48,7 @@ valkyrienskies.general.threadcount=物理线程数
 valkyrienskies.general.threadcount.tooltip=物理引擎使用的线程数, 建议为值为CPU线程数-2。 不能在游戏运行时修改。
 
 valkyrienskies.general.maxdetectedshipsize=飞船方块数量上限
-valkyrienskies.general.maxdetectedshipsize.tooltip=物理注入器一次性可以作用的最大方块数。方块多于这个数值的飞船无法被物理化。此数值不限制物理化以后的方块数量
+valkyrienskies.general.maxdetectedshipsize.tooltip=物理注入器一次性可以作用的最大方块数。方块多于这个数值的飞船无法被物理化。此数值不限制物理化以后的方块数量。
 
 valkyrienskies.general.gravityvecx=X轴重力矢量分量
 valkyrienskies.general.gravityvecx.tooltip=
