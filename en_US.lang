@@ -27,6 +27,8 @@ commands.vs.list-ships.ships=This world contains the following ships:\n%s
 
 commands.vs.gc.success=Successfully garbage collected!
 
+commands.vs.rename.success=Successfully renamed %s to %s!
+
 
 # Config (Remember to update VSConfig after any changes are made here)
 valkyrienskies.general.shiplowerlimit=Ship Y Position Minimum
