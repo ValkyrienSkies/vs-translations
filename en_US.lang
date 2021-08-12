@@ -16,6 +16,8 @@ tooltip.valkyrienskies.vs_water_pump=Removes the effects of nearby water, useful
 tile.boat_chair.name=Boat Chair
 tooltip.valkyrienskies.boat_chair=Use to mount boats in the sea!
 
+tile.small_ship_sail.name=Small Ship Sail
+
 
 # Item Tab
 itemGroup.valkyrienskies=Valkyrien Skies
