@@ -1,0 +1,289 @@
+#PARSE_ESCAPES
+
+### Valkyrien Skies Main
+
+# Blocks
+tile.captains_chair.name=船長席
+tooltip.valkyrienskies.captains_chair_1=座って船を制御します。
+tooltip.valkyrienskies.captains_chair_2=船の上に立っている場合は、コントロール時に座ります。それ以外の場合は、リモートで船をコントロールします。
+
+tile.passenger_chair.name=乗員席
+tooltip.valkyrienskies.passenger_chair=船にしっかりと座るために使います。
+
+tile.vs_water_pump.name=ウォーターポンプ
+tooltip.valkyrienskies.vs_water_pump=近くの水の影響を除去し、潜水艦に便利です。
+
+tile.boat_chair.name=ボートチェア
+tooltip.valkyrienskies.boat_chair=海上でボートに乗るために使います。
+
+tile.small_ship_sail.name=Small Ship Sail
+
+
+# Item Tab
+itemGroup.valkyrienskies=Valkyrien Skies
+
+
+## Commands
+commands.vs.list-ships.noships=この世界に船は存在していません。
+commands.vs.list-ships.ships=この世界には次の船があります。:\n%s
+
+commands.vs.gc.success=Successfully garbage collected!
+
+commands.vs.rename.success= %sから%sへの名称変更をしました。
+
+
+# Config (Remember to update VSConfig after any changes are made here)
+valkyrienskies.general.shiplowerlimit=船のY座標の最小値
+valkyrienskies.general.shiplowerlimit.tooltip=
+
+valkyrienskies.general.shipupperlimit=船のY座標の最小値
+valkyrienskies.general.shipupperlimit.tooltip=
+
+valkyrienskies.general.dogravity=重力を有効化
+valkyrienskies.general.dogravity.tooltip=
+
+valkyrienskies.general.dophysicsblocks=物理ブロックを有効化
+valkyrienskies.general.dophysicsblocks.tooltip=
+
+valkyrienskies.general.rendershipchunkclaimsindebug=Ship Chunk Debug Outlineをレンダリングする
+valkyrienskies.general.rendershipchunkclaimsindebug.tooltip=trueの場合、すべての船のチャンクは緑色のアウトラインでレンダリングされます（デバッグレンダリングモード（f3 + b）の場合）。
+
+valkyrienskies.general.showannoyingdebugoutput=デバッグコンソールをアウトプットする
+valkyrienskies.general.showannoyingdebugoutput.tooltip=奇妙なバグに遭遇した場合や、開発者がこの機能を有効にするように指示した場合を除き、推奨しません。
+
+valkyrienskies.general.timesimulatedperphysicstick=物理演算ごとのシミュレーション時間
+valkyrienskies.general.timesimulatedperphysicstick.tooltip=すべての物理演算をシミュレートする秒数です。デフォルトでは1秒間に100回の物理Tickがあるので、デフォルト値は1/100秒です。
+
+valkyrienskies.general.threadcount=物理演算をおこなうCPUスレッド数
+valkyrienskies.general.threadcount.tooltip=物理演算に使用するスレッド数。CPUのスレッド数から2を引いた値を使用することを推奨します。ランタイムには設定できません。
+
+valkyrienskies.general.maxdetectedshipsize=船の最大サイズ
+valkyrienskies.general.maxdetectedshipsize.tooltip=物理注入機が作ろうとする最大サイズの船。船がこれより大きい場合、注入機はそれが地面に置かれたと判断し、機能しません。
+
+valkyrienskies.general.gravityvecx=X方向の重力ベクトル
+valkyrienskies.general.gravityvecx.tooltip=
+
+valkyrienskies.general.gravityvecy=Y方向の重力ベクトル
+valkyrienskies.general.gravityvecy.tooltip=
+
+valkyrienskies.general.gravityvecz=Z方向の重力ベクトル
+valkyrienskies.general.gravityvecz.tooltip=
+
+valkyrienskies.general.tickstosticktoship=船とプレイヤーが一緒に移動するティック
+valkyrienskies.general.tickstosticktoship.tooltip=プレイヤーが船に触れると、他の船（または地面）に触れない限り、このティック数の間、船と一緒に移動します。このティック数が経過すると、プレイヤーは船と一緒に移動しなくなります。
+
+valkyrienskies.general.ship_loading_settings=船のロード設定
+valkyrienskies.general.ship_loading_settings.tooltip=近くにいるプレイヤーが船を読み込む/凍結する、見る/見ないの距離を設定します。これらの設定は、次の制約に従わなければなりません：#Player Watch Distance < Ship Load Distance < Ship Load Background Distance <= Player Unwatch Distance < Ship Unload Distance
+
+valkyrienskies.general.ship_loading_settings.watchDistance=Player Watch Ship Distance
+valkyrienskies.general.ship_loading_settings.watchDistance.tooltip=プレイヤーの船までのXZ距離がこれより小さい場合、まだその船を見ていなければ、その船を読み込み始めます。
+
+valkyrienskies.general.ship_loading_settings.loadDistance=Ship Load Distance
+valkyrienskies.general.ship_loading_settings.loadDistance.tooltip=プレイヤーの船までのXZ距離がこれより短い場合、その船がまだワールドにロードされていなければ、すぐにワールドにロードされます。
+
+valkyrienskies.general.ship_loading_settings.loadBackgroundDistance=Ship Load Background Distance
+valkyrienskies.general.ship_loading_settings.loadBackgroundDistance.tooltip=プレイヤーから船までのXZ距離がこれより短い場合、その船がまだワールドにロードされていなければ、バックグラウンドのスレッドを使ってプリロードされます。
+
+valkyrienskies.general.ship_loading_settings.unwatchDistance=Player Unwatch Ship Distance
+valkyrienskies.general.ship_loading_settings.unwatchDistance.tooltip=プレイヤーの船までのXZ距離がこれより大きい場合、現在見ているのであれば、その船を見るのをやめることになります。
+
+valkyrienskies.general.ship_loading_settings.unloadDistance=Ship Unload Distance
+valkyrienskies.general.ship_loading_settings.unloadDistance.tooltip=ある船からこのXZ距離内にプレイヤーがいない場合、その船が現在ロードされていれば、アンロードします。
+
+valkyrienskies.general.shipspawndetectorblacklist=船の組み立てブロックのブラックリスト
+valkyrienskies.general.shipspawndetectorblacklist.tooltip=船を組み立てるときに含むことできないのブロック。
+
+valkyrienskies.general.blockmass=ブロックの質量
+valkyrienskies.general.blockmass.tooltip=自動生成されたブロックの質量値を上書きします。質量の単位はkgです。
+
+### Valkyrien Skies Control
+
+# Items
+item.physics_core.name=物理コア
+tooltip.vs_control.physics_core=物理注入機のコアです。
+
+item.relay_wire.name=ワイヤー
+tooltip.vs_control.relay_wire=リレーを機械や他のリレーに接続するために使用します。すでに接続されているノードは切断されます。
+message.vs_control.error_relay_wire_limit=接続の上限に達しています。リレーは %d 個の接続を行うことができますが、その他のオブジェクトは 1 個の接続しか行うことができません。
+message.vs_control.error_relay_wire_length=ワイヤーが短すぎて、これらのノードを接続できません。
+
+item.vanishing_wire.name=透明ワイヤー
+tooltip.vs_control.vanishing_wire=ワイヤーのように使えますが、これを持っていないときは不可視になります。
+
+item.vs_wrench.name=VSレンチ
+tooltip.vs_control.wrench_usage=組み立てるには、VSレンチが必要です。
+tooltip.vs_control.wrench_modes=%s + %s でモードを変更
+tooltip.vs_control.wrench_switched.construct=VSレンチを構築モードに変更。
+tooltip.vs_control.wrench_switched.deconstruct=VSレンチを解体モードに変更。
+tooltip.vs_control.wrench_toggle=マルチブロックを右クリックすると、構築済みと解体済みが切り替わります。
+tooltip.vs_control.wrench.construct=マルチブロックの構築やギアボックスの向きを決める際に使用します。
+tooltip.vs_control.wrench.deconstruct=マルチブロックを安全に解体するために使用します。
+
+item.vs_ship_tracker.name=船追跡機
+
+# Blocks
+## Ship blocks
+tile.physics_infuser.name=物理注入機
+tooltip.vs_control.physics_infuser=このブロックに接続されているすべてのブロックを、新しい船に変えます。
+
+tile.physics_infuser_creative.name=クリエイティブ専用物理注入機
+tooltip.vs_control.physics_infuser_creative_1=このブロックに接続するブロックを船に変えます。ただし、山や地面に注入しないように注意してください。
+tooltip.vs_control.physics_infuser_creative_2=警告！これにはブロック制限がありません！触れたものすべてに注入されます。使用には十分注意してください。
+
+tile.physics_infuser_dummy.name=物理注入機（ダミー）
+tooltip.vs_control.physics_infuser_dummy=物理注入機の反対側
+
+tile.ship_helm.name=操舵装置
+tooltip.vs_control.ship_helm=このブロックは、それと同じネットワークで舵を回すことができます。
+
+tile.speed_telegraph.name=スピードテレグラフ
+tooltip.vs_control.speed_telegraph=このブロックでは、ギアボックスの出力速度を制御することで、プロペラの速度を制御することができます。
+
+tile.dummy_telegraph.name=スピードテレグラフ（ダミー）
+tooltip.vs_control.dummy_telegraph=機能を持たないスピードテレグラフです。\n活性化すると下のブロックも活性化します。
+
+tile.lift_lever.name=リフトレバー
+tooltip.vs_control.lift_lever=このブロックでは、ヴァルキリウム圧縮機の目標高度を設定することができます。
+
+tile.gearbox.name=ギアボックス
+tooltip.vs_control.gearbox_1=トルクの方向とパワーを変えることができます。
+tooltip.vs_control.gearbox_2=スピードテレグラフに接続して、トルク出力を制御します。
+
+tile.rotation_axle.name=回転軸
+tooltip.vs_control.rotation_axle=ヴァルキリウムエンジンのギアボックスからプロペラまでの接続に使用します。
+
+
+## Network
+tile.network_display.name=ネットワークディスプレイ
+tooltip.vs_control.network_display=[WIP] 接続されたすべてのノードのリストを表示します。
+
+tile.network_relay.name=ネットワークリレー
+tooltip.vs_control.network_relay=ワイヤーまたは透明ワイヤーを使用して、リレーを含む %d コンポーネントをこれに接続できます。
+
+
+## Multi-Block parts
+tile.valkyrium_compressor_part.name=ヴァルキリウム圧縮機のパーツ
+tooltip.vs_control.valkyrium_compressor_part_1=2x2x2のマルチブロック、ヴァルキリウム圧縮機の一部です。
+tooltip.vs_control.valkyrium_compressor_part_2=このマルチブロックの目的は、上下方向に多くの推力を与えることです。
+
+tile.rudder_part.name=舵のパーツ
+tooltip.vs_control.rudder_part=プロペラの推力の方向を変えるもので、操舵装置で操作します。
+
+tile.giant_propeller_part.name=プロペラのパーツ
+tooltip.vs_control.giant_propeller_part=トルクを推力に変換する3x3～7x7のマルチブロックです。
+
+tile.valkyrium_engine_part.name=ヴァルキリウムエンジンのパーツ
+tooltip.vs_control.valkyrium_engine_part=プロペラを動かすためのトルクを発生させるマルチブロックの一部です。
+
+
+## Legacy engines
+tile.basic_engine.name=基本エンジン
+tile.advanced_engine.name=発展エンジン
+tile.elite_engine.name=エリートエンジン
+tile.ultimate_engine.name=究極のエンジン
+tile.redstone_engine.name=レッドストーンエンジン
+
+tooltip.vs_control.legacy_engine=過去のエンジンで、レッドストーン信号のみで機能します。
+
+
+## Misc.
+tile.compacted_valkyrium.name=ヴァルキリウムブロック
+tooltip.vs_control.compacted_valkyrium=Lift force: %.0f Newtons.
+
+tile.gyroscope_stabilizer.name=ジャイロスタビライザー
+tooltip.vs_control.gyroscope_stabilizer=このブロックは、船の傾きを安定させるためのトルクを受動的に提供します。
+
+tile.gyroscope_dampener.name=ジャイロダンパー
+tooltip.vs_control.gyroscope_dampener=このブロックは、船が揺れるのを防ぐために、受動的にトルクを与えます。
+
+tooltip.vs_control.wrench.switched.construct=構築モードに変更しました
+tooltip.vs_control.wrench.switched.deconstruct=解体モードに変更しました
+
+
+# Gui
+gui.physics_infuser=物理注入機
+gui.assemble_ship=船を構築
+gui.disassemble_ship=船を解体
+gui.enable_physics=物理を有効化
+gui.disable_physics=物理を無効化
+gui.align_ship=船の位置を整える
+gui.stop_align_ship=船の整列をやめる
+
+
+## Not Yet Implemented
+tile.lift_valve.name=Lift Valve
+tooltip.vs_control.lift_valve=未実装です。
+
+# Config (Remember to update VSControlConfig after any changes are made here)
+vs_control.general.wrenchmodeless=レンチのモードを無効化
+vs_control.general.wrenchmodeless.tooltip=マルチブロックの構築状態をレンチでトグルさせたり、モードを解除したりします。
+
+vs_control.general.networkrelaylimit=ネットワークリレーの接続最大値
+vs_control.general.networkrelaylimit.tooltip=ネットワークリレーに接続できるコンポーネントやリレーの数、デフォルトは8です。
+
+vs_control.general.relaywirelength=ワイヤーの最大長
+vs_control.general.relaywirelength.tooltip=1本のワイヤーがどのくらいの長さまで伸ばせるか、デフォルトは8mです。
+
+vs_control.general.compactedvalkyriumlift=ヴァルキリウムブロックの揚力
+vs_control.general.compactedvalkyriumlift.tooltip=各ブロックが適用する上向きの力の大きさ。デフォルトは200000ニュートンです。
+
+vs_control.general.engine_thrust=エンジン推力の設定
+vs_control.general.engine_thrust.tooltip=エンジンブロックの推力を設定します。変更後はエンジンブロックを置き直す必要があります。
+
+vs_control.general.engine_thrust.basicenginethrust=基本エンジンの推力
+vs_control.general.engine_thrust.basicenginethrust.tooltip=
+
+vs_control.general.engine_thrust.advancedenginethrust=発展エンジンの推力
+vs_control.general.engine_thrust.advancedenginethrust.tooltip=
+
+vs_control.general.engine_thrust.eliteenginethrust=エリートエンジンの推力
+vs_control.general.engine_thrust.eliteenginethrust.tooltip=
+
+vs_control.general.engine_thrust.ultimateenginethrust=究極のエンジンの推力
+vs_control.general.engine_thrust.ultimateenginethrust.tooltip=
+
+vs_control.general.engine_thrust.redstoneenginethrust=レッドストーンエンジンの推力
+vs_control.general.engine_thrust.redstoneenginethrust.tooltip=
+
+### Valkyrien Skies World
+
+# Items
+item.valkyrium_crystal.name=ヴァルキリウムクリスタル
+tooltip.vs_world.valkyrium_crystal=持ちすぎると浮いてしまいます。
+
+
+# Blocks
+tile.valkyrium_ore.name=ヴァルキリウム鉱石
+tooltip.vs_world.valkyrium_ore_1=不思議な浮遊する鉱石。
+tooltip.vs_world.valkyrium_ore_2=持ちすぎると浮いてしまいます。
+
+
+# Potions
+effect.valkyrium-levitation=Valkyrium Levitation
+effect.valkyrium-levitation-jump=Valkyrium Levitation Jump
+
+potion.effect.valkyrium-levitation=Valkyrium Levitationのポーション
+potion.effect.valkyrium-levitation-jump=Valkyrium Levitation Jumpのポーション
+
+splash_potion.effect.valkyrium-levitation=Valkyrium Levitationのスプラッシュポーション
+splash_potion.effect.valkyrium-levitation-jump=Valkyrium Levitation Jumpのスプラッシュポーション
+
+tipped_arrow.effect.valkyrium-levitation=Valkyrium Levitationの矢
+tipped_arrow.effect.valkyrium-levitation-jump=Valkyrium Levitation Jumpの矢
+
+lingering_potion.effect.valkyrium-levitation= Valkyrium Levitationの残留ポーション
+lingering_potion.effect.valkyrium-levitation-jump=Valkyrium Levitation Jumpの残留ポーション
+
+
+# Config (Remember to update VSWorldConfig after any changes are made here)
+vs_world.general.valkyriumitemsliftplayers=ヴァルキリウムアイテムの揚力を有効化
+vs_world.general.valkyriumitemsliftplayers.tooltip=ヴァルキリウムアイテムは、trueの場合、持っているプレイヤーに上向きの力を加えます。falseの場合は力が加わりません。
+
+vs_world.general.valkyriumcrystalforce=ヴァルキリウムクリスタルの反重力
+vs_world.general.valkyriumcrystalforce.tooltip=デフォルトは1で、0に設定すると無効になります。
+
+vs_world.general.valkyriumoreforce=ヴァルキリウム鉱石の反重力
+vs_world.general.valkyriumoreforce.tooltip=デフォルトは4で、0に設定すると無効になります。
+
+vs_world.general.valkyriumoregenenabled=ヴァルキリウム鉱石の生成
+vs_world.general.valkyriumoregenenabled.tooltip=デフォルトはtrue。無効にするにはfalseに設定します。
