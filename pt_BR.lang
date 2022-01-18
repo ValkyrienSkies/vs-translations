@@ -1,0 +1,289 @@
+#PARSE_ESCAPES
+
+# Tradução por Kito (Hydr0gen2)
+
+### Valkyrien Skies Main
+
+# Blocks
+tile.captains_chair.name=Cadeira do capitão
+tooltip.valkyrienskies.captains_chair_1=Use para entrar no veiculo e controla-lo!
+tooltip.valkyrienskies.captains_chair_2=Se você estiver em contato com a nave, você subirá na cadeira, caso o contrario, você controlará o navio remotamente.
+
+tile.passenger_chair.name=Cadeira do passageiro
+tooltip.valkyrienskies.passenger_chair=Use para sentar na nave.
+
+tile.vs_water_pump.name=Vedação
+tooltip.valkyrienskies.vs_water_pump=Remove o efeito da agua, útil para submarinos.
+
+tile.boat_chair.name=Cadeira de barco
+tooltip.valkyrienskies.boat_chair=Use para entrar em barcos.
+
+tile.small_ship_sail.name=Vela de navio pequena
+
+
+# Item Tab
+itemGroup.valkyrienskies=Valkyrien Skies
+
+
+## Commands
+commands.vs.list-ships.noships=Esse mapa não tem nenhuma nave!
+commands.vs.list-ships.ships=Esse mapa contém as seguintes naves:\n%s
+
+commands.vs.gc.success=Detritos coletados com sucesso!
+
+commands.vs.rename.success=%s foi renomeado com sucesso para %s!
+
+
+# Config (Remember to update VSConfig after any changes are made here)
+valkyrienskies.general.shiplowerlimit=Ship Y Position Minimum
+valkyrienskies.general.shiplowerlimit.tooltip=
+
+valkyrienskies.general.shipupperlimit=Ship Y Position Maximum
+valkyrienskies.general.shipupperlimit.tooltip=
+
+valkyrienskies.general.dogravity=Enable Gravity
+valkyrienskies.general.dogravity.tooltip=
+
+valkyrienskies.general.dophysicsblocks=Enable Physics Blocks
+valkyrienskies.general.dophysicsblocks.tooltip=
+
+valkyrienskies.general.rendershipchunkclaimsindebug=Render Ship Chunk Debug Outline
+valkyrienskies.general.rendershipchunkclaimsindebug.tooltip=When true all ship chunks will be rendered with a green outline (in debug rendering mode (f3 + b)).
+
+valkyrienskies.general.showannoyingdebugoutput=Debug Console Output
+valkyrienskies.general.showannoyingdebugoutput.tooltip=Not recommended unless you've encountered a strange bug, or the developers told you to enable this.
+
+valkyrienskies.general.timesimulatedperphysicstick=Time Simulated Each Physics Tick
+valkyrienskies.general.timesimulatedperphysicstick.tooltip=The amount of seconds simulated every physics tick. There are 100 physics ticks per second by default, so the default value is 1/100th of a second.
+
+valkyrienskies.general.threadcount=Number of Physics Threads
+valkyrienskies.general.threadcount.tooltip=The number of threads to use for physics, recommended to use your cpu's thread count minus 2. Cannot be set at runtime.
+
+valkyrienskies.general.maxdetectedshipsize=Max Detected Ship Size
+valkyrienskies.general.maxdetectedshipsize.tooltip=The largest size ship a physics infuser will attempt to make. If a ship is larger than this the infuser will assume it was placed on the ground and give up.
+
+valkyrienskies.general.gravityvecx=Gravity Vector X
+valkyrienskies.general.gravityvecx.tooltip=
+
+valkyrienskies.general.gravityvecy=Gravity Vector Y
+valkyrienskies.general.gravityvecy.tooltip=
+
+valkyrienskies.general.gravityvecz=Gravity Vector Z
+valkyrienskies.general.gravityvecz.tooltip=
+
+valkyrienskies.general.tickstosticktoship=Number of Ticks Players Stick to Ships
+valkyrienskies.general.tickstosticktoship.tooltip=If a player touches a ship, then unless they touch another ship (or the ground) they will move along with the ship for this many ticks. After this number of ticks passes, the player will no longer move with the ship.
+
+valkyrienskies.general.ship_loading_settings=Ship Loading Settings
+valkyrienskies.general.ship_loading_settings.tooltip=Sets the distance at which ships get loaded/unloaded and watched/unwatched by nearby players. These settings must obey the following constraint:\nPlayer Watch Distance < Ship Load Distance < Ship Load Background Distance <= Player Unwatch Distance < Ship Unload Distance
+
+valkyrienskies.general.ship_loading_settings.watchDistance=Player Watch Ship Distance
+valkyrienskies.general.ship_loading_settings.watchDistance.tooltip=If a player's XZ distance to a ship is less than this, then if aren't already watching it, they will start watching that ship.
+
+valkyrienskies.general.ship_loading_settings.loadDistance=Ship Load Distance
+valkyrienskies.general.ship_loading_settings.loadDistance.tooltip=If a player's XZ distance to a ship is less than this, then if that ship isn't already loaded in the world, it will be loaded in the world immediately.
+
+valkyrienskies.general.ship_loading_settings.loadBackgroundDistance=Ship Load Background Distance
+valkyrienskies.general.ship_loading_settings.loadBackgroundDistance.tooltip=If a player's XZ distance to a ship is less than this, then if that ship isn't already loaded in the world, it will preload itself using background threads.
+
+valkyrienskies.general.ship_loading_settings.unwatchDistance=Player Unwatch Ship Distance
+valkyrienskies.general.ship_loading_settings.unwatchDistance.tooltip=If a player's XZ distance to a ship is greater than this, then if they're current watching it, they will stop watching that ship.
+
+valkyrienskies.general.ship_loading_settings.unloadDistance=Ship Unload Distance
+valkyrienskies.general.ship_loading_settings.unloadDistance.tooltip=If there are no players within this XZ distance of a ship, then if that ship is currently loaded, it will unload itself.
+
+valkyrienskies.general.shipspawndetectorblacklist=Ship Spawn Detector Blacklist
+valkyrienskies.general.shipspawndetectorblacklist.tooltip=Blocks to not be included when assembling a ship.
+
+valkyrienskies.general.blockmass=Block Mass
+valkyrienskies.general.blockmass.tooltip=Override the auto generated mass value of blocks. The units of mass are kg.
+
+### Valkyrien Skies Control
+
+# Items
+item.physics_core.name=Núcleo de energia valquirica
+tooltip.vs_control.physics_core=O núcleo de um Infusor físico
+
+item.relay_wire.name=Fio conector
+tooltip.vs_control.relay_wire=Usado para ligar conectores em componentes ou em outros conectores, desconectando conexsões anteriores
+message.vs_control.error_relay_wire_limit=Uma das conexões está no limite, conectores podem fazer %d conexções, qualquer outro bloco só pode fazer uma conexção.
+
+item.vanishing_wire.name=Fio oculto
+tooltip.vs_control.vanishing_wire=Funciona igual ao fio conector, porem fica invisivel quando não segurado
+
+item.vs_wrench.name=Chave nórdica
+tooltip.vs_control.wrench_usage=você precisa de uma Chave nórdica para construir isso.
+tooltip.vs_control.wrench_modes=%s + %s para mudar de modo.
+tooltip.vs_control.wrench_switched.construct=Chave nórdica: Modo de montagem.
+tooltip.vs_control.wrench_switched.deconstruct=Chave nórdica: Modo de desmontagem.
+tooltip.vs_control.wrench_toggle=Use o botão direito do mouse em uma estrutura multibloco para alternar entre montagem -> desmontagem
+tooltip.vs_control.wrench.construct=Use para montar estruturas multibloco e girar caixas de engrenagem.
+tooltip.vs_control.wrench.deconstruct=Use para desconstruir estruturas multibloco com segurança.
+
+item.vs_ship_tracker.name=Rastreador de naves
+
+# Blocks
+## Ship blocks
+tile.physics_infuser.name=Infusor físico
+tooltip.vs_control.physics_infuser=Transforma a estrutura conectada em uma nave, não funciona com a maior parte dos blocos pré-gerados, como pedra.
+
+tile.physics_infuser_creative.name=Infusor físico criativo
+tooltip.vs_control.physics_infuser_creative_1=Transforma qualquer estrutura em uma nave, por isso tome cuidado para não infundir o seu mapa inteiro.
+tooltip.vs_control.physics_infuser_creative_2=CUIDADO: Ele irá infundir tudo que tocar, use com muito cuidado.
+
+tile.physics_infuser_dummy.name=Infusor fisico falso
+tooltip.vs_control.physics_infuser_dummy=À cara-metade do infusor físico.
+
+tile.ship_helm.name=Timão
+tooltip.vs_control.ship_helm=Esse bloco irá girar as caudas conectadas em sua rede
+
+tile.speed_telegraph.name=Velocigrafo
+tooltip.vs_control.speed_telegraph=Esse bloco permite controlar a velocidade da saida das caixas de engrenagem, consecutivamente controlando a velocidade das Hélices.
+
+tile.dummy_telegraph.name=Falsigrafo
+tooltip.vs_control.dummy_telegraph=Um Velocigrafo des-funcional.
+
+tile.lift_lever.name=Nivelador de elevação.
+tooltip.vs_control.lift_lever=Esse loco permite definir a altitude que os Compressores de valquirium irão atingir
+
+tile.gearbox.name=Caixa de engrenagens
+tooltip.vs_control.gearbox_1=Permite modificar a direção e o torque do eixo.
+tooltip.vs_control.gearbox_2=Conecte num Velocigrafo para controlar o torque e direção.
+
+tile.rotation_axle.name=Eixo
+tooltip.vs_control.rotation_axle=Usado para conectar a Caixa de engrenagem nas Hélices.
+
+
+## Network
+tile.network_display.name=Display de rede
+tooltip.vs_control.network_display=[WIP] Lista todas as conexções da nave.
+
+tile.network_relay.name=Conector
+tooltip.vs_control.network_relay=Você consegue conectar %d componentes, incluindo outros conectores, usando fios conectores ou fios ocultos.
+
+
+## Multi-Block parts
+tile.valkyrium_compressor_part.name=Peça do compressor de valquirium 
+tooltip.vs_control.valkyrium_compressor_part_1=Parte de uma estrutura multibloco de 2x2x2, o compressor de valquirium
+tooltip.vs_control.valkyrium_compressor_part_2=Essa maquina gerará propulsão para cima e baixo.
+
+tile.rudder_part.name=Peça da cauda
+tooltip.vs_control.rudder_part=Muda a direção do movimento das Hélices, controlando pelo timão da nave.
+
+tile.giant_propeller_part.name=Peça da hélice gigante
+tooltip.vs_control.giant_propeller_part=Parte de uma estrutura de 3x3-7x7 que converte torque em propulção.
+
+tile.valkyrium_engine_part.name=Peça do motor valquirico
+tooltip.vs_control.valkyrium_engine_part=Parte de uma estrutura 2x3x2 que gera torque para alimentar as hélices.
+
+
+## Legacy engines
+tile.basic_engine.name=Motor básico
+tile.advanced_engine.name=Motor avançado
+tile.elite_engine.name=Motor de elite
+tile.ultimate_engine.name=Motor ultimate
+tile.redstone_engine.name=Motor de redstone
+
+tooltip.vs_control.legacy_engine=Motores antigos, precisam apenas de redstone para funcionar.
+
+
+## Misc.
+tile.compacted_valkyrium.name=Valquirium compactado
+tooltip.vs_control.compacted_valkyrium=Força de elevação: %.0f Newtons.
+
+tile.gyroscope_stabilizer.name=Estabilizador giroscópico da nave
+tooltip.vs_control.gyroscope_stabilizer=Este bloco passivamente gera um torque que nivela a nave.
+
+tile.gyroscope_dampener.name=Amortecedor giroscópico da nave
+tooltip.vs_control.gyroscope_dampener=Este bloco passivamente gera um torque que evita com que a nave balance.
+
+tooltip.vs_control.wrench_switched.construct=Chave nórdica: Modo de montagem.
+tooltip.vs_control.wrench_switched.deconstruct=Chave nórdica: Modo de desmontagem.
+
+
+# Gui
+gui.physics_infuser=Infusor físico
+gui.assemble_ship=Montar nave
+gui.disassemble_ship=Desmontar nave
+gui.enable_physics=Ativar física
+gui.disable_physics=Desativar física
+gui.align_ship=Alinhar navio
+gui.stop_align_ship=parar de alinhar
+
+
+## Not Yet Implemented
+tile.lift_valve.name=Valvula de elevação
+tooltip.vs_control.lift_valve=Não implementado.
+
+# Config (Remember to update VSControlConfig after any changes are made here)
+vs_control.general.wrenchmodeless=Disable Wrench Modes
+vs_control.general.wrenchmodeless.tooltip=Makes wrench toggle a multiblock’s constructed state, removes modes.
+
+vs_control.general.networkrelaylimit=Network Relay Connections Limit
+vs_control.general.networkrelaylimit.tooltip=How many components or relays can be connected to a Network Relay block, default is 8.
+
+vs_control.general.relaywirelength=Relay Wire Max Length
+vs_control.general.relaywirelength.tooltip=How long a single relay wire can extend. Default is 8 meters.
+
+vs_control.general.compactedvalkyriumlift=Compacted Valkyrium Upwards Force
+vs_control.general.compactedvalkyriumlift.tooltip=How much upwards force each block applies. Default is 200000 Newtons.
+
+vs_control.general.engine_thrust=Engine Thrust Settings
+vs_control.general.engine_thrust.tooltip=Set the thrust force of engine blocks. Engines blocks must be replaced after changes are made.
+
+vs_control.general.engine_thrust.basicenginethrust=Basic Engine Thrust
+vs_control.general.engine_thrust.basicenginethrust.tooltip=
+
+vs_control.general.engine_thrust.advancedenginethrust=Advanced Engine Thrust
+vs_control.general.engine_thrust.advancedenginethrust.tooltip=
+
+vs_control.general.engine_thrust.eliteenginethrust=Elite Engine Thrust
+vs_control.general.engine_thrust.eliteenginethrust.tooltip=
+
+vs_control.general.engine_thrust.ultimateenginethrust=Ultimate Engine Thrust
+vs_control.general.engine_thrust.ultimateenginethrust.tooltip=
+
+vs_control.general.engine_thrust.redstoneenginethrust=Redstone Engine Thrust
+vs_control.general.engine_thrust.redstoneenginethrust.tooltip=
+
+### Valkyrien Skies World
+
+# Items
+item.valkyrium_crystal.name=Cristal de valquirium
+tooltip.vs_world.valkyrium_crystal=Segurar muitos lhe fazerá levitar!
+
+
+# Blocks
+tile.valkyrium_ore.name=Minério de valquirium
+tooltip.vs_world.valkyrium_ore_1=Um minério flutuante e misterioso.
+tooltip.vs_world.valkyrium_ore_2=Segurar muitos lhe fazerá levitar!
+
+
+# Potions
+effect.valkyrium-levitation=Levitação valquirica
+effect.valkyrium-levitation-jump=Salto valquirico
+
+potion.effect.valkyrium-levitation=Levitação valquirica
+potion.effect.valkyrium-levitation-jump=Salto valquirico
+splash_potion.effect.valkyrium-levitation=Poção arremessável da Levitação valquirica
+splash_potion.effect.valkyrium-levitation-jump=Poção arremessável o Salto valquirico
+
+tipped_arrow.effect.valkyrium-levitation=Flecha de Levitação valquirica
+tipped_arrow.effect.valkyrium-levitation-jump=Flecha de Salto valquirico
+
+lingering_potion.effect.valkyrium-levitation=Poção prolongada de Levitação valquirica
+lingering_potion.effect.valkyrium-levitation-jump=Poção prolongada de Salto valquirico
+
+
+# Config (Remember to update VSWorldConfig after any changes are made here)
+vs_world.general.valkyriumitemsliftplayers=Enable Valkyrium Item Lift Force
+vs_world.general.valkyriumitemsliftplayers.tooltip=When true valkyrium items add upwards force to players holding them. When false they won't.
+
+vs_world.general.valkyriumcrystalforce=Valkyrium Crystal Anti-Gravity Force
+vs_world.general.valkyriumcrystalforce.tooltip=Default is 1. Set to 0 to disable.
+
+vs_world.general.valkyriumoreforce=Valkyrium Ore Anti-Gravity Force
+vs_world.general.valkyriumoreforce.tooltip=Default is 4. Set to 0 to disable.
+
+vs_world.general.valkyriumoregenenabled=Valkyrium Ore Generation Enabled
+vs_world.general.valkyriumoregenenabled.tooltip=Default is true. Set to false to disable.
