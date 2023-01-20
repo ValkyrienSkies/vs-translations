@@ -1,0 +1,287 @@
+#PARSE_ESCAPES
+
+### Valkyrien Skies Main
+
+# Blocks
+tile.captains_chair.name=Капитанское кресло
+tooltip.valkyrienskies.captains_chair_1=Используйте для установки и управления кораблями!
+tooltip.valkyrienskies.captains_chair_2=Если вы стоите на корабле, вы подниметесь на него под контролем. В противном случае вы будете управлять кораблем удаленно.
+
+tile.passenger_chair.name=Пассажирское кресло
+tooltip.valkyrienskies.passenger_chair=Используйте, чтобы плотно сидеть на кораблях
+
+tile.vs_water_pump.name=Водяной насос
+tooltip.valkyrienskies.vs_water_pump=Убирает эффекты близлежащей воды, полезно для подводных лодок.
+
+tile.boat_chair.name=Лодочное кресло
+tooltip.valkyrienskies.boat_chair=Используйте для крепления лодок в море!
+
+
+# Item Tab
+itemGroup.valkyrienskies=Valkyrien Skies
+
+
+## Commands
+commands.vs.list-ships.noships=В этом мире нет кораблей!
+commands.vs.list-ships.ships=Этот мир содержит следующие корабли:\n%s
+
+commands.vs.gc.success=Мусор успешно собран!
+
+commands.vs.rename.success=Успешно переименовано с %s в %s!
+
+
+# Config (Remember to update VSConfig after any changes are made here)
+valkyrienskies.general.shiplowerlimit=Минимальная точка корабля по Y
+valkyrienskies.general.shiplowerlimit.tooltip=
+
+valkyrienskies.general.shipupperlimit=Максимальная точка корабля по Y
+valkyrienskies.general.shipupperlimit.tooltip=
+
+valkyrienskies.general.dogravity=Включить гравитацию
+valkyrienskies.general.dogravity.tooltip=
+
+valkyrienskies.general.dophysicsblocks=Включить физические блоки
+valkyrienskies.general.dophysicsblocks.tooltip=
+
+valkyrienskies.general.rendershipchunkclaimsindebug=Контур отладки рендеринга чанков корабля
+valkyrienskies.general.rendershipchunkclaimsindebug.tooltip=При значении true все фрагменты кораблей будут отображаться с зеленым контуром (в режиме отладочного рендеринга (f3 + b)).
+
+valkyrienskies.general.showannoyingdebugoutput=Вывод консоли отладки
+valkyrienskies.general.showannoyingdebugoutput.tooltip=Не рекомендуется, если вы не столкнулись со странной ошибкой или разработчики не сказали вам включить это.
+
+valkyrienskies.general.timesimulatedperphysicstick=Время имитации каждого физического такта
+valkyrienskies.general.timesimulatedperphysicstick.tooltip=Количество секунд, в течение которых моделируется каждый такт физики. По умолчанию используется 100 тактов физики в секунду, поэтому значение по умолчанию — 1/100-я доля секунды.
+
+valkyrienskies.general.threadcount=Количество потоков физики
+valkyrienskies.general.threadcount.tooltip=Количество потоков, используемых для физики, рекомендуется использовать количество потоков вашего процессора минус 2. Не может быть установлено во время выполнения.
+
+valkyrienskies.general.maxdetectedshipsize=Максимальный обнаруженный размер корабля
+valkyrienskies.general.maxdetectedshipsize.tooltip=Корабль самого большого размера, который попытается построить физический инфузор. Если корабль больше этого, инфузор решит, что он был поставлен на землю, и сдастся.
+
+valkyrienskies.general.gravityvecx=Вектор гравитации по X
+valkyrienskies.general.gravityvecx.tooltip=
+
+valkyrienskies.general.gravityvecy=Вектор гравитации по Y
+valkyrienskies.general.gravityvecy.tooltip=
+
+valkyrienskies.general.gravityvecz=Вектор гравитации по Z
+valkyrienskies.general.gravityvecz.tooltip=
+
+valkyrienskies.general.tickstosticktoship=Количество тиков, на которые игроки прилипают к кораблям
+valkyrienskies.general.tickstosticktoship.tooltip=Если игрок коснется корабля, то, если он не коснется другого корабля (или земли), он будет двигаться вместе с кораблем в течение этого количества тиков. По прошествии этого количества тиков игрок больше не будет двигаться вместе с кораблем.
+
+valkyrienskies.general.ship_loading_settings=Настройки загрузки корабля
+valkyrienskies.general.ship_loading_settings.tooltip=Устанавливает расстояние, на котором корабли прогружается/выгружаются и находятся под наблюдением ближайших игроков. Эти настройки должны подчиняться следующему ограничению:\nРасстояние наблюдения игрока < Расстояние загрузки корабля < Расстояние загрузки корабля <= Расстояние отсутствия наблюдения игрока < Расстояние разгрузки корабля
+
+valkyrienskies.general.ship_loading_settings.watchDistance=Расстояние от игрока до наблюдения корабля
+valkyrienskies.general.ship_loading_settings.watchDistance.tooltip=Если расстояние XZ игрока до корабля меньше этого то, если игрок еще не видет корабль то, он его увидет.
+
+valkyrienskies.general.ship_loading_settings.loadDistance=Расстояние прогрузки корабля
+valkyrienskies.general.ship_loading_settings.loadDistance.tooltip=Если расстояние XZ игрока до корабля меньше этого то, если этот корабль еще не загружен в мире, он будет загружен в мире немедленно.
+
+valkyrienskies.general.ship_loading_settings.loadBackgroundDistance=Фоновое расстояние прогрузки корабля
+valkyrienskies.general.ship_loading_settings.loadBackgroundDistance.tooltip=Если расстояние XZ игрока до корабля меньше этого то, если этот корабль еще не загружен в мире, он предварительно загрузит себя с помощью фоновых потоков.
+
+valkyrienskies.general.ship_loading_settings.unwatchDistance=Расстояние от игрока до корабля
+valkyrienskies.general.ship_loading_settings.unwatchDistance.tooltip=Если расстояние XZ игрока до корабля больше этого то, если он в данный момент видет корабль то, он перестанет его видеть.
+
+valkyrienskies.general.ship_loading_settings.unloadDistance=Расстояние выгрузки корабля
+valkyrienskies.general.ship_loading_settings.unloadDistance.tooltip=Если на этом расстоянии XZ от корабля нет игроков то, если корабль в данный момент прогружен, он выгрузится сам.
+
+valkyrienskies.general.shipspawndetectorblacklist=Черный список детектора появления кораблей
+valkyrienskies.general.shipspawndetectorblacklist.tooltip=Блоки, которые нельзя включать при сборке корабля.
+
+valkyrienskies.general.blockmass=Масса блока
+valkyrienskies.general.blockmass.tooltip=Переопределить автоматически сгенерированное значение массы блоков. Единицы массы - кг.
+
+### Valkyrien Skies Control
+
+# Items
+item.physics_core.name=Ядро физики
+tooltip.vs_control.physics_core=Ядро физического инфузера.
+
+item.relay_wire.name=Провод реле
+tooltip.vs_control.relay_wire=Используется для подключения реле к компонентам и другим реле. Отключит уже подключенные узлы.
+message.vs_control.error_relay_wire_limit=Количество соединений достигло максимума. Узлы реле могут устанавливать %d соединений, все остальные объекты могут устанавливать только 1 соединение.
+message.vs_control.error_relay_wire_length=Провод слишком короткий для соединения этих узлов!
+
+item.vanishing_wire.name=Исчезающий провод
+tooltip.vs_control.vanishing_wire=Работает как релейный провод, но невидим, когда его не держат.
+
+item.vs_wrench.name=Ключ VS
+tooltip.vs_control.wrench_usage=Для сборки необходим ключ VS.
+tooltip.vs_control.wrench_modes=%s + %s для изменения режима.
+tooltip.vs_control.wrench_switched.construct=Переключил ключ VS в режим строительства.
+tooltip.vs_control.wrench_switched.deconstruct=Ключ VS переключен в режим деконструкции.
+tooltip.vs_control.wrench_toggle=Щелкните правой кнопкой мыши мультиблоки, чтобы переключиться между построенными -> деконструированными.
+tooltip.vs_control.wrench.construct=Используется для построения мультиблоков и ориентации редуктора.
+tooltip.vs_control.wrench.deconstruct=Используется для безопасной деконструкции мультиблоков.
+
+item.vs_ship_tracker.name=Трекер корабля
+
+# Blocks
+## Ship blocks
+tile.physics_infuser.name=Инфузер физики
+tooltip.vs_control.physics_infuser=Превращает любые блоки, прикрепленные к этому, в совершенно новый Корабль, не будет наполнять большинство предварительно сгенерированных блоков, таких как камень.
+
+tile.physics_infuser_creative.name=Творческий инфузер физики
+tooltip.vs_control.physics_infuser_creative_1=Превращает любые блоки, прикрепленные к этому, в совершенно новый Корабль, только будьте осторожны, чтобы не залить весь ваш мир.
+tooltip.vs_control.physics_infuser_creative_2=Внимание, это не имеет ограничений по блокам, и оно заполнит все, к чему прикоснется! Используйте с особой осторожностью.
+
+tile.physics_infuser_dummy.name=Манекен инфузера физики
+tooltip.vs_control.physics_infuser_dummy=Другая половина инфузера физики.
+
+tile.ship_helm.name=Корабельный штурвал
+tooltip.vs_control.ship_helm=Этот блок позволит вам поворачивать рули в той же сети, что и он.
+
+tile.speed_telegraph.name=Скоростной телеграф
+tooltip.vs_control.speed_telegraph=Этот блок позволит вам управлять выходной скоростью редукторов и, таким образом, контролировать скорость вращения винтов.
+
+tile.dummy_telegraph.name=Манекен телефграфа
+tooltip.vs_control.dummy_telegraph=Неработающий скоростной телеграф.\nПри использовании активирует блок под ним.
+
+tile.lift_lever.name=Подъемный рычаг
+tooltip.vs_control.lift_lever=Этот блок позволяет установить целевую высоту компрессоров Valkyrium.
+
+tile.gearbox.name=Коробка передач
+tooltip.vs_control.gearbox_1=Позволяет изменять направление крутящего момента и мощность.
+tooltip.vs_control.gearbox_2=Подключитесь к скоростному телеграфу, чтобы контролировать выходной крутящий момент.
+
+tile.rotation_axle.name=Ось вращения
+tooltip.vs_control.rotation_axle=Используется для соединения двигателей Valkyrium от редукторов к винтам.
+
+
+## Network
+tile.network_display.name=Сетевой дисплей
+tooltip.vs_control.network_display=[WIP] Список всех узлов в подключенной сети.
+
+tile.network_relay.name=Сетевое реле
+tooltip.vs_control.network_relay=Позволяет подключить к нему %d компонентов, включая реле, с помощью провода реле или исчезающего провода.
+
+
+## Multi-Block parts
+tile.valkyrium_compressor_part.name=Часть компрессора Valkyrium
+tooltip.vs_control.valkyrium_compressor_part_1=Часть мультиблока 2x2x2, компрессор Valkyrium.
+tooltip.vs_control.valkyrium_compressor_part_2=Цель этого мультиблока - обеспечить большую тягу вверх или вниз.
+
+tile.rudder_part.name=Часть руля
+tooltip.vs_control.rudder_part=Изменяет направление тяги от винтов; Контролируется корабельным штурвалом.
+
+tile.giant_propeller_part.name=Часть гигантского пропеллера
+tooltip.vs_control.giant_propeller_part=Мультиблок от 3x3 до 7x7, который преобразует крутящий момент в тягу.
+
+tile.valkyrium_engine_part.name=Часть двигателя Valkyrium
+tooltip.vs_control.valkyrium_engine_part=Часть мультиблока, создающая крутящий момент для питания винтов.
+
+
+## Legacy engines
+tile.basic_engine.name=Базовый двигатель
+tile.advanced_engine.name=Продвинутый движок
+tile.elite_engine.name=Элитный двигатель
+tile.ultimate_engine.name=Ультимативный двигатель
+tile.redstone_engine.name=Редстоун двигатель
+
+tooltip.vs_control.legacy_engine=Устаревший движок, для работы требуется только сигнал красного камня.
+
+
+## Misc.
+tile.compacted_valkyrium.name=Компактный Valkyrium
+tooltip.vs_control.compacted_valkyrium=Подъемная сила: %.0f ньютонов.
+
+tile.gyroscope_stabilizer.name=Стабилизатор корабельного гироскопа
+tooltip.vs_control.gyroscope_stabilizer=Этот блок пассивно обеспечивает крутящий момент, чтобы выровнять корабль.
+
+tile.gyroscope_dampener.name=Демпфер корабельного гироскопа
+tooltip.vs_control.gyroscope_dampener=Этот блок пассивно обеспечивает крутящий момент, предотвращающий раскачивание корабля.
+
+tooltip.vs_control.wrench.switched.construct=Ключ в режиме сборки
+tooltip.vs_control.wrench.switched.deconstruct=Ключ в режиме деконструкции
+
+
+# Gui
+gui.physics_infuser=Инфузер физики
+gui.assemble_ship=Собрать корабль
+gui.disassemble_ship=Разобрать корабль
+gui.enable_physics=Включить физику
+gui.disable_physics=Отключить физику
+gui.align_ship=Выровнять корабль
+gui.stop_align_ship=Остановить выравнивание
+
+
+## Not Yet Implemented
+tile.lift_valve.name=Подъемный клапан
+tooltip.vs_control.lift_valve=Еще не реализовано.
+
+# Config (Remember to update VSControlConfig after any changes are made here)
+vs_control.general.wrenchmodeless=Отключить режимы ключа
+vs_control.general.wrenchmodeless.tooltip=Заставляет ключ переключать построенное состояние мультиблока, удаляет режимы.
+
+vs_control.general.networkrelaylimit=Ограничение сетевых подключений
+vs_control.general.networkrelaylimit.tooltip=Сколько компонентов или реле можно подключить к блоку сетевого реле, по умолчанию 8.
+
+vs_control.general.relaywirelength=Максимальная длина провода реле
+vs_control.general.relaywirelength.tooltip=Как долго может протянуться один провод реле, по умолчанию 8.
+
+vs_control.general.compactedvalkyriumlift=Компактный Valkyrium Сила поднятия
+vs_control.general.compactedvalkyriumlift.tooltip=Сколько силы поднятия прилагается к каждому блоку, по умолчанию 200тыс ньютонов.
+
+vs_control.general.engine_thrust=Настройки тяги двигателя
+vs_control.general.engine_thrust.tooltip=Установите силу тяги блоков двигателя. Блоки двигателей должны быть заменены после внесения изменений.
+
+vs_control.general.engine_thrust.basicenginethrust=Тяга базового двигателя
+vs_control.general.engine_thrust.basicenginethrust.tooltip=
+
+vs_control.general.engine_thrust.advancedenginethrust=Тяга продвинутого двигателя
+vs_control.general.engine_thrust.advancedenginethrust.tooltip=
+
+vs_control.general.engine_thrust.eliteenginethrust=Тяга элитного двигателя
+vs_control.general.engine_thrust.eliteenginethrust.tooltip=
+
+vs_control.general.engine_thrust.ultimateenginethrust=Тяга ультимативного двигателя
+vs_control.general.engine_thrust.ultimateenginethrust.tooltip=
+
+vs_control.general.engine_thrust.redstoneenginethrust=Тяга редстоун двигателя
+vs_control.general.engine_thrust.redstoneenginethrust.tooltip=
+
+### Valkyrien Skies World
+
+# Items
+item.valkyrium_crystal.name=Кристалл Valkyrium'a
+tooltip.vs_world.valkyrium_crystal=Держа его слишком много, вы будете левитировать.
+
+
+# Blocks
+tile.valkyrium_ore.name=Руда Valkyrium'a
+tooltip.vs_world.valkyrium_ore_1=Таинственная парящая руда.
+tooltip.vs_world.valkyrium_ore_2=Держа его слишком много, вы будете левитировать.
+
+
+# Potions
+effect.valkyrium-levitation=Левитация Valkyrium'a
+effect.valkyrium-levitation-jump=Левитационный прыжок Valkyrium'a
+
+potion.effect.valkyrium-levitation=Зелье левитации Valkyrium'a
+potion.effect.valkyrium-levitation-jump=Зелье левитационных прыжков Valkyrium'a
+
+splash_potion.effect.valkyrium-levitation=Взрывающееся зелье левитации Valkyrium'a
+splash_potion.effect.valkyrium-levitation-jump=Взрывающееся зелье левитационных прыжков Valkyrium'a
+
+tipped_arrow.effect.valkyrium-levitation=Стрела с левитацией Valkyrium'a
+tipped_arrow.effect.valkyrium-levitation-jump=Стрела с левитационным прыжком Valkyrium'a
+
+lingering_potion.effect.valkyrium-levitation=Оседающее зелье левитации Valkyrium'a
+lingering_potion.effect.valkyrium-levitation-jump=Оседающее зелье левитационных прыжков Valkyrium'a
+
+
+# Config (Remember to update VSWorldConfig after any changes are made here)
+vs_world.general.valkyriumitemsliftplayers=Включить силу поднятия предметам Valkyrium'a
+vs_world.general.valkyriumitemsliftplayers.tooltip=Когда true предметы Valkyrium'a будут добавлять силу поднятия игроку, который их держит. Когда false они не будут этого делать.
+
+vs_world.general.valkyriumcrystalforce=Антигравитационная сила кристалла Valkyrium'a
+vs_world.general.valkyriumcrystalforce.tooltip=Значение по умолчанию — 1. Установите значение 0 для отключения.
+
+vs_world.general.valkyriumoreforce=Антигравитационная сила руды Valkyrium'a
+vs_world.general.valkyriumoreforce.tooltip=Значение по умолчанию — 4. Установите значение 0 для отключения.
+
+vs_world.general.valkyriumoregenenabled=Включение генерация руды Valkyrium'a
+vs_world.general.valkyriumoregenenabled.tooltip=Значение по умолчанию — true. Установите значение false для отключения.
